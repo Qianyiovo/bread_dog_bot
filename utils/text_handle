@@ -1,0 +1,13 @@
+import re
+
+
+class Text:
+    def __init__(self):
+        pass
+
+    def rm_color(text: str):
+        find = re.findall("\[c?\/[0-9a-fA-F]{6}:(.*?)\]", text)
+        for i in find:
+            text = re.sub("\[c?\/[0-9a-fA-F]{6}:(.*?)\]", i, text, 1)
+        return text
+
